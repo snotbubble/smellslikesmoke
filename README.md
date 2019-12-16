@@ -4,11 +4,17 @@ look for polygons,
 get distance from evac route to nearest polygon point,  
 report and alert if conditions are met.  
 
+variable b is the most vunerable evac route location, not home address,  
+redburbs contain locations that trigger an evac if burning,  
+yellowburbs are to watch carefully if burning. 
+
+reporting is only as reliable as the feed data!  
+
 uses a distance function from Bob Chamberlain, via Andrew Hedges, via 'gwaramadze' via 'Michael0x2a' (latter two on stackexchange) https://stackoverflow.com/questions/19412462/getting-distance-between-two-points-based-on-latitude-longitude
 
-wav files are temps; sound bad on the XA2 phone.
+wav files are temps; they sound glitchy on the XA2 phone.
 
 run in terminal as:
 > watch -n 600 'python3 redzone.py'
 
-works OK on Jolla Sailfish 3.2, Sony Xperia XA2.
+works OK on Jolla Sailfish 3.2, Sony Xperia XA2.  
