@@ -20,12 +20,15 @@ Warning notification will trigger if:
 
 Uses a distance function from Bob Chamberlain, via Andrew Hedges, via 'gwaramadze' via 'Michael0x2a' (latter two on stackexchange).  
 https://stackoverflow.com/questions/19412462/getting-distance-between-two-points-based-on-latitude-longitude  
-Distances may not be totally accurate.  
+Distances may not be totally accurate.  Fires with no polys will show as 999km for now.  
 
 run in terminal as:
 > watch -n 600 'python3 redzone.py'
 
 Works OK on Jolla Sailfish 3.2, Sony Xperia XA2. 
-Phone has to be kept out of suspended state overnight. 
-Nightly-Clock app by Paul Wallace will do this, just leave it running overnight (will drain battery).  
+Phone has to be kept out of suspended state, especially overnight. 
+Nightly-Clock app by Paul Wallace keeps the phone unsuspended, 
+will drain battery so leave it charging.  
 https://openrepos.net/content/allstar12345/nightly-clock  
+
+BB10 version is still being tested...
