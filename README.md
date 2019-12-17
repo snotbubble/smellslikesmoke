@@ -1,6 +1,6 @@
 Fire data from:  
 http://www.rfs.nsw.gov.au/feeds/majorIncidents.xml  
-Checked every 10min.  
+
 
 Variable b is the most vunerable evac route location, not home address.  
 In this case: the site of a probable traffic jam to get out of the suburb.
