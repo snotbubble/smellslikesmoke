@@ -5,6 +5,10 @@ import subprocess
 import re, html
 from math import sin, cos, sqrt, atan2, radians
 
+b = [-33.689990, 150.546212]
+redburbs = ['faulconbridge', 'springwood', 'linden', 'winmalee', 'valley heights', 'warrimoo', 'woodford', 'bunyan', 'yellow rock', 'mount hay']
+yellowburbs = ['tomah', 'bilpin', 'berambing', 'mount banks', 'wentworth falls', 'blaxland', 'glenbrook', 'bowen mountain', 'yarramundi', 'ruined castle']
+
 def getdist(la, lb, oa, ob) :
 	# function posted by gwaramadze & fixed by Michael0x2a on stackexchange, referring to Andrew Hedges, who referred to Bob Chamberlain
 	# https://andrew.hedges.name/experiments/haversine/
@@ -34,16 +38,10 @@ feed = cdr + "/feed.xml"
 print(feed)
 
 ac = []
-b = [-33.689990, 150.546212]
-
 s = urllib.request.urlretrieve('http://www.rfs.nsw.gov.au/feeds/majorIncidents.xml', feed)
 t = et.parse(feed).getroot()
-
 bb = 'gst-launch-1.0 -q filesrc location=' + cdr + '/jno.wav ! decodebin ! autoaudiosink'
 aa = 'gst-launch-1.0 -q filesrc location=' + cdr + '/jsu.wav ! decodebin ! autoaudiosink'
-
-redburbs = ['faulconbridge', 'springwood', 'linden', 'winmalee', 'valley heights', 'warrimoo', 'woodford', 'bunyan', 'yellow rock', 'mount hay']
-yellowburbs = ['tomah', 'bilpin', 'berambing', 'mount banks', 'wentworth falls', 'blaxland', 'glenbrook', 'bowen mountain', 'yarramundi', 'ruined castle']
 
 for d in t.iter('item') :
 	odk = 999.0
