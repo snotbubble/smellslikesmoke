@@ -34,9 +34,9 @@ feed = cdr + "/feed.xml"
 print(feed)
 
 ac = []
-b = [-33.683798, 150.555539]
+b = [-33.689990, 150.546212]
 
-#s = urllib.request.urlretrieve('http://www.rfs.nsw.gov.au/feeds/majorIncidents.xml', feed)
+s = urllib.request.urlretrieve('http://www.rfs.nsw.gov.au/feeds/majorIncidents.xml', feed)
 t = et.parse(feed).getroot()
 
 bb = 'gst-launch-1.0 -q filesrc location=' + cdr + '/jno.wav ! decodebin ! autoaudiosink'
@@ -73,11 +73,12 @@ for d in t.iter('item') :
 	for y in yellowburbs :
 		if y in dd.lower() : isyellow = True
 	if isred: print("isred = " + str(isred))
-	if isyellow: 
-		print("{0:.2f}".format(odk) + "Km : " + tt + " is on fire (" + cc + ")")
-		for q in range(2) : subprocess.call(bb.split())
+	if isyellow or (odk < 20.0 and ("out of control" in dd.lower())):
+		print("{0:.2f}".format(odk) + "Km : " + tt + " fire (" + cc + ")")
+		for q in range(2) : subprocess.call(bb.split())		
 	if isred or odk < 12.0 or (isyellow and "emergency" in dd.lower()):
-		print("{0:.2f}".format(odk) + "Km : " + tt + " : " + cc + "\n\t" + dd + "\n\n")
+		print("\n")
+		print("{0:.2f}".format(odk) + "Km : " + tt + " : (" + cc + ")\n\t" + dd + "\n")
 		for q in range(10) : subprocess.call(aa.split())
 
 
