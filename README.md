@@ -31,4 +31,4 @@ Nightly-Clock app by Paul Wallace keeps the phone unsuspended,
 will drain battery so leave it charging.  
 https://openrepos.net/content/allstar12345/nightly-clock  
 
-BB10 version is still being tested...
+BB10 version tested, works via Helium but can't play any audio, so not useful.
